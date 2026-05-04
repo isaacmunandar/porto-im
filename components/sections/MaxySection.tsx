@@ -1,3 +1,5 @@
+"use client";
+
 import { useRevealChildren } from "@/hooks/useRevealChildren";
 import React from "react";
 import SectionLabel from "../ui/SectionLabel";
