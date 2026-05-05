@@ -1,7 +1,8 @@
 "use client";
+import SectionLabel from "@/components/ui/SectionLabel";
 import { useRevealChildren } from "@/hooks/useRevealChildren";
-import SectionLabel from "../ui/SectionLabel";
 import { CREDENTIALS } from "@/lib/data";
+import Image from "next/image";
 
 export default function AboutSection() {
   const sectionRef = useRevealChildren<HTMLElement>();
@@ -25,13 +26,17 @@ export default function AboutSection() {
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mt-[72px] items-start">
-        {/* {Photo Black} */}
+        {/* Photo block */}
         <div className="fade-up relative">
           <div className="w-full aspect-[3/4] bg-brand-gray flex items-center justify-center overflow-hidden">
             <div className="w-full h-full bg-gradient-to-br from-[#D0D0D0] to-[#A8A8A8] flex items-center justify-center">
-              <span className="font-condensed text-[11px] tracking-[0.15em] uppercase text-black/20">
-                Place photo here
-              </span>
+              <Image
+                src="/isaac-2.jpeg"
+                alt="Isaac Munandar"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
+              />
             </div>
           </div>
           <div className="absolute bottom-[-1px] right-[-1px] bg-brand-yellow px-6 py-4">
@@ -45,7 +50,7 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* {Content} */}
+        {/* Content */}
         <div className="fade-up delay-1">
           <div className="text-[17px] font-light text-[#444] leading-[1.8] mb-10">
             <p className="mb-5">
@@ -53,18 +58,26 @@ export default function AboutSection() {
               That moment in 2020 didn&apos;t break me — it gave me clarity on
               what actually matters:{" "}
               <strong className="text-brand-black font-medium">
-                building people
+                building people.
               </strong>
             </p>
             <p className="mb-5">
               Today I lead MAXY Academy, an AI-driven edtech company preparing
               the next generation for the future of work — while helping
-              enterprises implement AI trough training, automation, and agentic
+              enterprises implement AI through training, automation, and agentic
               AI solutions.
+            </p>
+            <p>
+              My work sits at the intersection of technology and human
+              potential. AI is not a threat to people — it&apos;s the greatest
+              opportunity we&apos;ve ever had,{" "}
+              <strong className="text-brand-black font-medium">
+                if you know how to use it.
+              </strong>
             </p>
           </div>
 
-          <div className="border-t border-brand-border">
+          {/* <div className="border-t border-brand-border">
             {CREDENTIALS.map((cred) => (
               <div
                 key={cred.title}
@@ -78,7 +91,7 @@ export default function AboutSection() {
                 </span>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
