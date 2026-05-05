@@ -1,12 +1,11 @@
-"use client";
-import { FOOTER_LINKS } from "@/lib/data";
 import Link from "next/link";
+import { FOOTER_LINKS, FOOTER_SOCIALS } from "@/lib/data";
 
 export default function Footer() {
   return (
     <footer className="px-5 md:px-10 lg:px-20 pt-20 pb-10 border-t border-brand-border">
-      <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-15 mb-1.5">
-        {/* {Brand column} */}
+      <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-15 mb-15">
+        {/* Brand column */}
         <div>
           <div className="font-condensed font-black text-[28px] uppercase tracking-[0.04em] text-brand-black mb-4">
             Isaac <span className="text-brand-blue">Munandar</span>
@@ -14,37 +13,18 @@ export default function Footer() {
           <div className="font-condensed font-bold text-[12px] tracking-[0.12em] uppercase text-brand-muted mb-7">
             AI Expert · Serial Entrepreneur · Builder of People
           </div>
-          <p>
+          <p className="text-[14px] font-light text-brand-muted leading-[1.7] mb-8 max-w-[280px]">
             Building AI-ready organizations and the next generation of leaders
             across Southeast Asia.
           </p>
           <div className="flex gap-2">
-            {[
-              {
-                label: "in",
-                href: "https://linkedin.com/in/isaacmunandar",
-                ariaLabel: "LinkedIn",
-              },
-              {
-                label: "ig",
-                href: "https://instagram.com/isaac.munandar",
-                ariaLabel: "Instagram",
-              },
-              {
-                label: "tt",
-                href: "https://tiktok.com/@isaac.munandar",
-                ariaLabel: "TikTok",
-              },
-              {
-                label: "yt",
-                href: "https://youtube.com/@isaac.munandar",
-                ariaLabel: "YouTube",
-              },
-            ].map((s) => (
+            {FOOTER_SOCIALS.map((s) => (
               <Link
                 key={s.label}
                 href={s.href}
-                aria-label={s.ariaLabel}
+                aria-label={s.aria}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-9 h-9 border border-brand-border flex items-center justify-center font-condensed text-[11px] font-bold tracking-[0.05em] text-brand-muted uppercase no-underline hover:bg-brand-blue hover:text-white hover:border-brand-blue transition-all duration-200"
               >
                 {s.label}
@@ -53,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* {Services} */}
+        {/* Services */}
         <div>
           <div className="font-condensed font-bold text-[12px] tracking-[0.15em] uppercase text-brand-black mb-5">
             Services
@@ -62,7 +42,7 @@ export default function Footer() {
             {FOOTER_LINKS.services.map((l) => (
               <li key={l.label}>
                 <Link
-                  href={l.label}
+                  href={l.href}
                   className="text-[14px] font-light text-brand-muted no-underline hover:text-brand-blue transition-colors duration-200"
                 >
                   {l.label}
