@@ -1,26 +1,90 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Font families reference next/font CSS vars — must be inline to resolve at runtime */
+@theme inline {
+  --font-condensed: var(--font-barlow-condensed), "Helvetica Neue", Helvetica, sans-serif;
+  --font-body: var(--font-barlow), "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Brand colors */
+  --color-brand-blue: #0038FF;
+  --color-brand-blue-dark: #0025B8;
+  --color-brand-yellow: #FFD600;
+  --color-brand-black: #0A0A0A;
+  --color-brand-gray: #F2F2F2;
+  --color-brand-muted: #888888;
+  --color-brand-border: #E0E0E0;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Responsive headline sizes */
+  --text-hero: clamp(80px, 8.5vw, 140px);
+  --text-section: clamp(52px, 5.5vw, 88px);
+  --text-maxy: clamp(64px, 6vw, 100px);
+
+  /* Marquee */
+  --animate-marquee: marquee 25s linear infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    cursor: none;
+    overflow-x: hidden;
+    font-weight: 300;
+    background-color: #FFFFFF;
+    color: #0A0A0A;
+  }
+}
+
+@layer utilities {
+  .text-outline-black {
+    -webkit-text-stroke: 2px #0A0A0A;
+    color: transparent;
+  }
+  .text-outline-white {
+    -webkit-text-stroke: 2px #FFFFFF;
+    color: transparent;
+  }
+  .text-yellow-bg {
+    background-color: #FFD600;
+    padding: 0 8px;
+    display: inline-block;
+    line-height: 1;
+  }
+}
+
+/* Scroll reveal */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-up.delay-1 { transition-delay: 0.15s; }
+.fade-up.delay-2 { transition-delay: 0.30s; }
+.fade-up.delay-3 { transition-delay: 0.45s; }
+
+/* Ghost number overlays on service cards via data-num attribute */
+.service-card[data-num]::before {
+  content: attr(data-num);
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  font-family: var(--font-barlow-condensed), "Helvetica Neue", sans-serif;
+  font-size: 80px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.06);
+  line-height: 1;
+  letter-spacing: -2px;
+  pointer-events: none;
 }
