@@ -32,15 +32,6 @@ export interface MaxyStat {
   label: string;
 }
 
-export interface Thought {
-  tag: string;
-  title: string;
-  excerpt?: string;
-  meta: string;
-  isFeatured?: boolean;
-  gradient?: string;
-}
-
 export interface Resource {
   type: string;
   title: string;
@@ -49,9 +40,30 @@ export interface Resource {
 }
 
 export interface SocialPost {
-  text: string;
-  bg: string;
+  id: string;
+  platform: "instagram" | "tiktok" | "youtube" | "linkedin";
+  photo: string;
+  url: string;
+  handle: string;
+  caption: string;
 }
+
+export interface ThoughtPost {
+  id: string;
+  platform: "linkedin";
+  photo: string;
+  url: string;
+  handle: string;
+  caption: string;
+  tag: string;
+  title: string;
+  excerpt?: string;
+  date: string;
+  readTime: string;
+  featured: boolean;
+}
+
+export type Platform = "instagram" | "tiktok" | "youtube" | "linkedin";
 
 export interface FooterLink {
   label: string;
@@ -62,4 +74,10 @@ export interface FooterLinksMap {
   services: FooterLink[];
   content: FooterLink[];
   company: FooterLink[];
+}
+
+export interface FooterSocial {
+  label: string;
+  href: string;
+  aria: string;
 }
