@@ -1,9 +1,7 @@
 "use client";
-
-import { useRevealChildren } from "@/hooks/useRevealChildren";
-import React from "react";
-import SectionLabel from "../ui/SectionLabel";
 import Link from "next/link";
+import SectionLabel from "@/components/ui/SectionLabel";
+import { useRevealChildren } from "@/hooks/useRevealChildren";
 import { MAXY_STATS } from "@/lib/data";
 
 export default function MaxySection() {
@@ -15,8 +13,8 @@ export default function MaxySection() {
       id="maxy"
       className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]"
     >
-      {/* {Left — dark } */}
-      <div className="bg-brand-black px-5 md:px-10 lg:px-20 py-[120px] flex flex-col justify-center">
+      {/* Left — dark */}
+      <div className="bg-brand-black px-5 md:px-10 lg:px-20 py-[80px] md:py-[120px] flex flex-col justify-center">
         <div className="fade-up">
           <SectionLabel className="text-brand-yellow">
             MAXY Academy
@@ -59,13 +57,13 @@ export default function MaxySection() {
         </div>
       </div>
 
-      {/* {Right — stat grid} */}
+      {/* Right — stat grid */}
       <div className="bg-brand-gray grid grid-cols-2 grid-rows-2">
         {MAXY_STATS.map((stat, i) => (
           <div
             key={stat.label}
             className={[
-              "px-12 py-14 flex flex-col justify-end",
+              "px-4 py-8 sm:px-8 sm:py-10 md:px-12 md:py-14 flex flex-col justify-end",
               i % 2 === 0 ? "border-r border-brand-border" : "",
               i < 2 ? "border-b border-brand-border" : "",
               i === 1 ? "bg-brand-blue" : "",
@@ -74,7 +72,7 @@ export default function MaxySection() {
               .join(" ")}
           >
             <div
-              className={`font-condensed font-black text-[64px] leading-none mb-2 ${
+              className={`font-condensed font-black text-[40px] md:text-[64px] leading-none mb-2 ${
                 i === 1 ? "text-brand-yellow" : "text-brand-black"
               }`}
             >
