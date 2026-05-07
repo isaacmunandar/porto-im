@@ -290,26 +290,26 @@ export const RESOURCES: Resource[] = [
     pdfFilename: "Isaac-Munandar-AI-Tools-Guide-2026.pdf",
   },
   {
-    id: "automation-workflows",
-    badge: "Free",
-    type: "Automation Workflow",
-    title: "5 AI Automation Workflows to Implement This Week",
-    description:
-      "Step-by-step automation blueprints for content, sales, customer support, reporting, and HR onboarding.",
-    cta: "Download Workflows →",
-    pdfPath: "/free-resources/automation-workflows.pdf",
-    pdfFilename: "Isaac-Munandar-AI-Automation-Workflows.pdf",
-  },
-  {
-    id: "prompt-library",
+    id: "academic-prompt-pack",
     badge: "Free",
     type: "Prompt Library",
-    title: "Custom AI Prompts for CEOs, HR, Marketing & Sales",
+    title: "Custom AI Prompts for Academics & Lecturers",
     description:
-      "Battle-tested prompts organized by role and function. Copy, customize, use. Built from real enterprise work.",
-    cta: "Access Prompt Library →",
-    pdfPath: "/free-resources/prompt-library.pdf",
-    pdfFilename: "Isaac-Munandar-CEO-Prompt-Library.pdf",
+      "Curated collection of 5 ready-to-use AI prompts for academics. Accelerate research, teaching, and publishing — without compromising integrity.",
+    cta: "Download Prompt Pack →",
+    pdfPath: "/free-resources/academic-prompt-pack.pdf",
+    pdfFilename: "Lead Magnet Website_For Academic.pdf",
+  },
+  {
+    id: "business-leader-prompt-pack",
+    badge: "Free",
+    type: "Prompt Library",
+    title: "Custom AI Prompts for Business Leaders",
+    description:
+      "4 ready-to-use AI prompts for key company roles — CEO, HR, Marketing, and Sales. Copy, paste, and get actionable results instantly.",
+    cta: "Download Prompt Pack →",
+    pdfPath: "/free-resources/business-leader-prompts.pdf",
+    pdfFilename: "Lead Magnet Website_For Business Leader.pdf",
   },
 ];
 
