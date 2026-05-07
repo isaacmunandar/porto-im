@@ -11,7 +11,7 @@ export default function ServicesSection() {
     <section
       ref={secetionRef}
       id="services"
-      className="bg-brand-blue px-5 md:px-10 lg:px-20 py-[120px]"
+      className="bg-brand-blue px-5 md:px-10 lg:px-20 py-[80px] md:py-[120px]"
     >
       <div className="fade-up">
         <SectionLabel className="text-brand-yellow">What I Do</SectionLabel>
@@ -34,7 +34,7 @@ export default function ServicesSection() {
             <div
               key={service.num}
               data-num={service.num}
-              className={`service-card fade-up bg-brand-blue hover:bg-brand-blue-dark px-11 py-[52px] relative overflow-hidden transition-colors duration-300 ${
+              className={`service-card fade-up bg-brand-blue hover:bg-brand-blue-dark px-6 py-10 md:px-11 md:py-[52px] relative overflow-hidden transition-colors duration-300 ${
                 i === 1 ? "delay-1" : i === 2 ? "delay-2" : ""
               }`}
             >
