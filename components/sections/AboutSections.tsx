@@ -11,7 +11,7 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="px-5 md:px-10 lg:px-20 py-[120px]"
+      className="px-5 md:px-10 lg:px-20 py-[80px] md:py-[120px]"
     >
       <div className="fade-up">
         <SectionLabel>About Isaac</SectionLabel>
@@ -25,7 +25,7 @@ export default function AboutSection() {
         <span className="text-outline-black">Builder of People.</span>
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mt-[72px] items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20 mt-[48px] md:mt-[72px] items-start">
         {/* Photo block */}
         <div className="fade-up relative">
           <div className="w-full aspect-[3/4] bg-brand-gray flex items-center justify-center overflow-hidden">
