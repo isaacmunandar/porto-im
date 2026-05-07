@@ -14,7 +14,7 @@ export default function ThoughtsSection() {
     <section
       ref={sectionRef}
       id="thoughts"
-      className="bg-white px-5 md:px-10 lg:px-20 py-[120px]"
+      className="bg-white px-5 md:px-10 lg:px-20 py-[80px] md:py-[120px]"
     >
       {/* Top bar */}
       <div className="fade-up flex flex-col sm:flex-row justify-between sm:items-end gap-8 mb-16">
@@ -52,7 +52,7 @@ export default function ThoughtsSection() {
               src={featured.photo}
               alt={featured.title}
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
               sizes="(max-width: 1024px) 100vw, 56vw"
             />
           </div>

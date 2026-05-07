@@ -14,6 +14,8 @@ import type {
   FooterSocial,
 } from "./types";
 
+export type { Resource } from "./types";
+
 export const NAV_LINKS: NavLink[] = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
@@ -277,22 +279,37 @@ export const SOCIAL_PLATFORMS: SocialPlatformEntry[] = [
 
 export const RESOURCES: Resource[] = [
   {
+    id: "ai-tools-guide",
+    badge: "Free",
     type: "AI Tools Guide",
     title: "20 AI Tools Every Business Leader Needs in 2026",
-    desc: "Curated list of production-ready AI tools by function — marketing, ops, finance, HR. No fluff, just what works.",
+    description:
+      "Curated list of production-ready AI tools by function — marketing, ops, finance, HR. No fluff, just what works.",
     cta: "Download Free Guide →",
+    pdfPath: "/free-resources/ai-tools-guide.pdf",
+    pdfFilename: "Isaac-Munandar-AI-Tools-Guide-2026.pdf",
   },
   {
-    type: "Automation Workflow",
-    title: "5 AI Automation Workflows to Implement This Week",
-    desc: "Step-by-step automation blueprints for content, sales, customer support, reporting, and HR onboarding.",
-    cta: "Download Workflows →",
-  },
-  {
+    id: "academic-prompt-pack",
+    badge: "Free",
     type: "Prompt Library",
-    title: "Custom AI Prompts for CEOs, HR, Marketing & Sales",
-    desc: "Battle-tested prompts organized by role and function. Copy, customize, use. Built from real enterprise work.",
-    cta: "Access Prompt Library →",
+    title: "Custom AI Prompts for Academics & Lecturers",
+    description:
+      "Curated collection of 5 ready-to-use AI prompts for academics. Accelerate research, teaching, and publishing — without compromising integrity.",
+    cta: "Download Prompt Pack →",
+    pdfPath: "/free-resources/academic-prompt-pack.pdf",
+    pdfFilename: "Lead Magnet Website_For Academic.pdf",
+  },
+  {
+    id: "business-leader-prompt-pack",
+    badge: "Free",
+    type: "Prompt Library",
+    title: "Custom AI Prompts for Business Leaders",
+    description:
+      "4 ready-to-use AI prompts for key company roles — CEO, HR, Marketing, and Sales. Copy, paste, and get actionable results instantly.",
+    cta: "Download Prompt Pack →",
+    pdfPath: "/free-resources/business-leader-prompts.pdf",
+    pdfFilename: "Lead Magnet Website_For Business Leader.pdf",
   },
 ];
 

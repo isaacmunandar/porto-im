@@ -23,7 +23,7 @@ export default function HeroSection() {
       className="pt-[68px] min-h-screen grid grid-cols-1 lg:grid-cols-2 overflow-hidden"
     >
       {/* Left panel */}
-      <div className="px-5 md:px-10 lg:px-20 py-[100px] flex flex-col justify-center bg-white relative z-[2]">
+      <div className="px-5 md:px-10 lg:px-20 py-[72px] md:py-[100px] flex flex-col justify-center bg-white relative z-[2]">
         {/* Tag */}
         <div className="fade-up inline-flex items-center gap-[10px] text-[11px] font-medium tracking-[0.2em] uppercase text-brand-blue mb-10">
           <span className="w-[6px] h-[6px] rounded-full bg-brand-blue flex-shrink-0" />
@@ -64,8 +64,9 @@ export default function HeroSection() {
             src="/isaac-1.jpeg"
             alt="Isaac Munandar"
             fill
-            style={{ objectFit: "cover" }}
             priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            style={{ objectFit: "cover" }}
           />
         </div>
 
@@ -74,13 +75,13 @@ export default function HeroSection() {
           {HERO_STATS.map((stat, i) => (
             <div
               key={stat.label}
-              className={`px-8 py-7 ${i < HERO_STATS.length - 1 ? "border-r border-white/15" : ""}`}
+              className={`px-3 py-4 sm:px-6 sm:py-6 md:px-8 md:py-7 ${i < HERO_STATS.length - 1 ? "border-r border-white/15" : ""}`}
             >
-              <div className="font-condensed font-black text-[48px] leading-none text-white mb-1">
+              <div className="font-condensed font-black text-[28px] sm:text-[36px] md:text-[48px] leading-none text-white mb-1">
                 {stat.num}
                 <span className="text-brand-yellow">{stat.suffix}</span>
               </div>
-              <div className="text-[11px] font-normal tracking-[0.1em] uppercase text-white/55">
+              <div className="text-[9px] sm:text-[10px] md:text-[11px] font-normal tracking-[0.08em] md:tracking-[0.1em] uppercase text-white/55">
                 {stat.label}
               </div>
             </div>

@@ -16,7 +16,7 @@ export default function SocialSection() {
     <section
       ref={sectionRef}
       id="social"
-      className="bg-white px-5 md:px-10 lg:px-20 py-[120px]"
+      className="bg-white px-5 md:px-10 lg:px-20 py-[80px] md:py-[120px]"
     >
       <div className="fade-up">
         <SectionLabel>Follow Along</SectionLabel>
@@ -31,12 +31,12 @@ export default function SocialSection() {
       </h2>
 
       {/* Tabs */}
-      <div className="fade-up delay-2 flex border-b border-brand-border mt-10 mb-12">
+      <div className="fade-up delay-2 flex overflow-x-auto border-b border-brand-border mt-10 mb-12">
         {SOCIAL_PLATFORMS.map((platform) => (
           <button
             key={platform.key}
             onClick={() => setActive(platform.key)}
-            className={`px-7 py-[14px] font-condensed font-bold text-[14px] tracking-[0.12em] uppercase cursor-pointer border-b-[3px] -mb-px transition-colors duration-200 ${
+            className={`shrink-0 px-4 md:px-7 py-[14px] font-condensed font-bold text-[13px] md:text-[14px] tracking-[0.1em] md:tracking-[0.12em] uppercase cursor-pointer border-b-[3px] -mb-px transition-colors duration-200 ${
               active === platform.key
                 ? "text-brand-blue border-brand-blue"
                 : "text-brand-muted border-transparent hover:text-brand-black"

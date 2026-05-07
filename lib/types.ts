@@ -33,10 +33,14 @@ export interface MaxyStat {
 }
 
 export interface Resource {
+  id: string;
+  badge: string;
   type: string;
   title: string;
-  desc: string;
+  description: string;
   cta: string;
+  pdfPath: string;
+  pdfFilename: string;
 }
 
 export interface SocialPost {

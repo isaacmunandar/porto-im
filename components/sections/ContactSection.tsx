@@ -20,7 +20,7 @@ export default function ContactSection() {
     <section
       ref={sectionRef}
       id="contact"
-      className="bg-[#0A0A0A] text-white px-5 md:px-10 lg:px-20 py-[120px] grid grid-cols-1 lg:grid-cols-2 gap-20 items-start"
+      className="bg-[#0A0A0A] text-white px-5 md:px-10 lg:px-20 py-[80px] md:py-[120px] grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-start"
     >
       {/* Left */}
       <div className="fade-up">
