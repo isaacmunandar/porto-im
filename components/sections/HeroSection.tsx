@@ -64,8 +64,9 @@ export default function HeroSection() {
             src="/isaac-1.jpeg"
             alt="Isaac Munandar"
             fill
-            style={{ objectFit: "cover" }}
             priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            style={{ objectFit: "cover" }}
           />
         </div>
 
