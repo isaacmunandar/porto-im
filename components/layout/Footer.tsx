@@ -4,7 +4,7 @@ import { FOOTER_LINKS, FOOTER_SOCIALS } from "@/lib/data";
 export default function Footer() {
   return (
     <footer className="px-5 md:px-10 lg:px-20 pt-20 pb-10 border-t border-brand-border">
-      <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-15 mb-15">
+      <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr] gap-10 md:gap-15 mb-10 md:mb-15">
         {/* Brand column */}
         <div>
           <div className="font-condensed font-black text-[28px] uppercase tracking-[0.04em] text-brand-black mb-4">
@@ -91,7 +91,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="flex justify-between items-center pt-8 border-t border-brand-border">
+      <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 pt-8 border-t border-brand-border">
         <div className="text-[12px] text-brand-muted tracking-[0.05em]">
           © 2026 Isaac Munandar. All rights reserved.
         </div>
