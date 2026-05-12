@@ -17,9 +17,49 @@ const barlowCondensed = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://isaacmunandar.com"),
   title: "Isaac Munandar — AI Expert & Entrepreneur",
   description:
     "I help enterprises implement AI for real growth — and train the next generation of leaders to lead it.",
+  keywords: [
+    "Isaac Munandar",
+    "AI consultant",
+    "AI trainer",
+    "enterprise AI",
+    "AI implementation",
+    "AI automation",
+    "MAXY Academy",
+    "Indonesia AI",
+    "artificial intelligence",
+    "AI entrepreneur",
+  ],
+  authors: [{ name: "Isaac Munandar" }],
+  openGraph: {
+    title: "Isaac Munandar — AI Expert & Entrepreneur",
+    description:
+      "I help enterprises implement AI for real growth — and train the next generation of leaders to lead it.",
+    url: "https://isaacmunandar.com",
+    siteName: "Isaac Munandar",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Isaac Munandar — AI Expert & Entrepreneur",
+    description:
+      "I help enterprises implement AI for real growth — and train the next generation of leaders to lead it.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  alternates: {
+    canonical: "https://isaacmunandar.com",
+  },
 };
 
 export default function RootLayout({
